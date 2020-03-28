@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@v1
       - name: build
         run: |
-          cowsay -f ghostbusters "-Who ya gonna call?" > cow.txt
+          cowsay -f ghostbusters " Who ya gonna call?" > cow.txt
           cat cow.txt
