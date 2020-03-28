@@ -1,0 +1,15 @@
+name: build2
+
+on: [push]
+
+jobs:
+  cowsay:
+    runs-on: self-hosted
+    container: npalm/cowsay
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: build
+        run: |
+          cowsay -f ghostbusters "- Who ya gonna call?" > cow.txt
+          cat cow.txt
