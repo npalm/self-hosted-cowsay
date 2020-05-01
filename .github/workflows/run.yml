@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: cow
+      - name: build
         run: |
           cowsay -f ghostbusters "   Who ya gonna call?" > cow.txt
           cat cow.txt
