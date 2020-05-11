@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: build
         run: |
-          sleep 21
+          sleep 200
           cowsay -f ghostbusters "    Who ya gonna call?" > cow.txt
           cat cow.txt
