@@ -1,4 +1,4 @@
-name: build
+name: build1
 on:
   push:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
         default: "test run..."
 
 jobs:
-  cowsay1:
+  cowsay1_1:
     runs-on: self-hosted
     container: npalm/cowsay
 
@@ -19,7 +19,7 @@ jobs:
         run: |
           cowsay -f ghostbusters "   Who ya gonna call?" > cow.txt
           cat cow.txt
-  cowsay2:
+  cowsay1_2:
     runs-on: self-hosted
     container: npalm/cowsay
 
