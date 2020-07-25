@@ -19,6 +19,7 @@ jobs:
         run: |
           cowsay -f ghostbusters "   Who ya gonna call?" > cow.txt
           cat cow.txt
+
   cowsay1_2:
     runs-on: self-hosted
     container: npalm/cowsay
