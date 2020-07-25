@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Manual mode"
+        description: "Manual mode 2"
         required: true
         default: "test run..."
 
