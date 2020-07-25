@@ -23,7 +23,7 @@ jobs:
   cowsay2_2:
     runs-on: self-hosted
     container: npalm/cowsay
-    # needs: cowsay2_1
+    needs: cowsay2_1
 
     steps:
       - uses: actions/checkout@v1
