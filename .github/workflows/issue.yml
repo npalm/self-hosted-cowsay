@@ -17,4 +17,4 @@ jobs:
               body: '👋 Thanks for opening an issue, we combe back shortly.'
             })
       - name: Dump job context
-        run: .github/notify.sh ${{ context.issue.title }} ${{ context.issue.url }} ${{ secrets.SLACK_WEBHOOK}}
+        run: .github/notify.sh ${{ github.event.issue.title }} ${{ github.event.issue.url }} ${{ secrets.SLACK_WEBHOOK}}
