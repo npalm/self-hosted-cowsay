@@ -21,4 +21,4 @@ jobs:
         run: find .
 
       - name: Notify
-        run: .github/notify.sh ${{ github.event.issue.title }} ${{ github.event.issue.url }} ${{ secrets.SLACK_WEBHOOK}}
+        run: .github/notify.sh ${{ github.event.issue.title }} ${{ github.event.issue.url }} ${{ secrets.SLACK_WEBHOOK }}
