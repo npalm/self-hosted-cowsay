@@ -21,9 +21,10 @@ jobs:
         env:
           event: ${{ toJson(github.event) }}
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            console.log(context);
+            console.log("hello")
+            # console.log(context);
 
             # github.issues.createComment({
             #   issue_number: context.issue.number,
