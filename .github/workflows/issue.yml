@@ -1,24 +1,33 @@
 on:
   issues:
-    types: [opened]
+    # types: [opened]
 
 jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      # - uses: actions/github-script@v2
+      #   with:
+      #     github-token: ${{secrets.GITHUB_TOKEN}}
+      #     script: |
+      #       github.issues.createComment({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: '👋 Thanks for opening an issue, we combe back shortly.'
+      #       })
       - uses: actions/github-script@v2
+        env:
+          event: ${{ toJson(github.event) }}
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '👋 Thanks for opening an issue, we combe back shortly.'
-            })
-      - name: Notify
-        run: find .
-
-      - name: Notify
-        run: .github/notify.sh ${{ github.event.issue.title }} ${{ github.event.issue.url }} ${{ secrets.SLACK_WEBHOOK }}
+            console.log(context);
+            console.log(event);
+            # github.issues.createComment({
+            #   issue_number: context.issue.number,
+            #   owner: context.repo.owner,
+            #   repo: context.repo.repo,
+            #   body: '👋 Thanks for opening an issue, we combe back shortly.'
+            # })
