@@ -1,6 +1,6 @@
 name: build1
 on:
-  push:
+  # push:
   workflow_dispatch:
     inputs:
       name:
