@@ -6,7 +6,7 @@ on:
       name:
         description: "Manual mode"
         required: true
-        default: "test run..."
+        default: "test run...."
 
 jobs:
   cowsay2_1:
