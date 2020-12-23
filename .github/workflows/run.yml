@@ -1,6 +1,6 @@
 name: build1
 on:
-  # push:
+  push:
   workflow_dispatch:
     inputs:
       name:
@@ -23,7 +23,8 @@ jobs:
   cowsay1_2:
     runs-on: self-hosted
     container: npalm/cowsay
-
+    needs: cowsay1_1
+    
     steps:
       - uses: actions/checkout@v1
       - name: build
