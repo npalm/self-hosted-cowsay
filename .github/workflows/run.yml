@@ -24,6 +24,18 @@ jobs:
     runs-on: self-hosted
     container: npalm/cowsay
     needs: cowsay1_1
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: build
+        run: |
+          cowsay -f ghostbusters "   Who ya gonna call?" > cow.txt
+          cat cow.txt
+
+  cowsay1_3:
+    runs-on: self-hosted
+    container: npalm/cowsay
+    needs: cowsay1_1
     
     steps:
       - uses: actions/checkout@v1
